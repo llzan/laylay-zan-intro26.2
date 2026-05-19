@@ -1,5 +1,5 @@
 body {
-  font-family: "Monserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #ddefff;
   color: #e9e9e9;
   margin: 20px;
@@ -24,7 +24,7 @@ a {
 h1 {
   color: #d76050;
   font-size: 75px;
-  font-family: "Monserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   text-align: center;
   padding: 25px;
@@ -50,12 +50,13 @@ section {
   padding: 15px;
   margin: 20px;
   border-radius: 20px;
-  h2 {
-    color: #ffffff;
-    font-size: 30px;
-    font-family: "monospace", monospace;
-    font-weight: bold;
-  }
+}
+
+#About h2 {
+  color: #ffffff;
+  font-size: 30px;
+  font-family: "monospace", monospace;
+  font-weight: bold;
 }
 
 #Experience {
@@ -63,18 +64,18 @@ section {
   padding: 15px;
   margin: 20px;
   border-radius: 20px;
-  font-family: "Monserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #363333;
   display: flex;
   flex-direction: row;
   list-style: none;
+}
 
-  h2 {
-    color: #ffffff;
-    font-size: 30px;
-    font-family: "monospace", monospace;
-    font-weight: bold;
-  }
+#Experience h2 {
+  color: #363333;
+  font-size: 30px;
+  font-family: "monospace", monospace;
+  font-weight: bold;
 }
 
 #Skills {
@@ -82,26 +83,32 @@ section {
   padding: 15px;
   margin: 20px;
   border-radius: 20px;
-  h2 {
-    color: #ffffff;
-    font-size: 30px;
-    font-family: "monospace", monospace;
-    font-weight: bold;
-  }
 }
+
+#Skills h2 {
+  color: #ffffff;
+  font-size: 30px;
+  font-family: "monospace", monospace;
+  font-weight: bold;
+}
+
 
 #Projects {
   background-color: #656a62;
   padding: 15px;
   margin: 20px;
   border-radius: 20px;
-  h2 {
-    color: #ffffff;
-    font-size: 30px;
-    font-family: "monospace", monospace;
-    font-weight: bold;
-  }
 }
+
+#Projects h2 {
+  color: #ffffff;
+  font-size: 30px;
+  font-family: "monospace", monospace;
+  font-weight: bold;
+}
+
+
+
 #Connect {
   display: flex;
   flex-direction: column;
@@ -113,12 +120,11 @@ section {
   padding: 15px;
   margin: 20px;
   text-align: center;
+}
 
-  h2 {
-    color: #7591b5;
-    font-size: 30px;
-    font-family: "monospace", monospace;
-    font-weight: bold;
-    align: center;
-  }
+#Connect h2 {
+  color: #7591b5;
+  font-size: 30px;
+  font-family: "monospace", monospace;
+  font-weight: bold;
 }
