@@ -52,14 +52,14 @@ section {
   padding: 15px;
   margin: 20px;
 }
-#About {
+#about {
   background-color: #d79076;
   padding: 30px;
   margin: 20px;
   border-radius: 20px;
 }
 
-#About h2 {
+#about h2 {
   color: #ffffff;
   font-size: 40px;
   font-family: "monospace", monospace;
@@ -67,7 +67,7 @@ section {
   text-align: center;
 }
 
-#Experience {
+#experience {
   background-color: #b2aa3e;
   padding: 15px;
   margin: 20px;
@@ -79,14 +79,14 @@ section {
   list-style: none;
 }
 
-#Experience h2 {
+#experience h2 {
   color: #ffffff;
   font-size: 30px;
   font-family: "monospace", monospace;
   font-weight: bold;
 }
 
-#Skills {
+#skills {
   background-color: #60708a;
   padding: 15px;
   margin: 20px;
@@ -96,14 +96,14 @@ section {
   gap: 0px;
 }
 
-#Skills h2 {
+#skills h2 {
   color: #ffffff;
   font-size: 30px;
   font-family: "monospace", monospace;
   font-weight: bold;
 }
 
-#Projects {
+#projects {
   background-color: #656a62;
   padding: 15px;
   margin: 20px;
@@ -113,14 +113,14 @@ section {
   gap: 0px;
 }
 
-#Projects h2 {
+#projects h2 {
   color: #ffffff;
   font-size: 30px;
   font-family: "monospace", monospace;
   font-weight: bold;
 }
 
-#Connect {
+#connect {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -133,7 +133,7 @@ section {
   text-align: center;
 }
 
-#Connect h2 {
+#connect h2 {
   color: #7591b5;
   font-size: 30px;
   font-family: "monospace", monospace;
@@ -141,8 +141,8 @@ section {
 }
 
 footer {
-  background-color: #a9bfdc;
-  color: #ffffff;
+  background-color: #ddefff;
+  color: #d79076;
   text-align: center;
   padding: 50px;
   margin-top: 50px;
