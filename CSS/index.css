@@ -147,3 +147,31 @@ footer {
   padding: 50px;
   margin-top: 50px;
 }
+
+#leave_message {
+  background-color: #c3d3e5;
+  text-align: center;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+#leave_message h2 {
+  color: #7591b5;
+  font-size: 25px;
+  font-family: "monospace", monospace;
+  font-weight: bold;
+}
+
+#leave_message form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+#leave_message label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #7591b5;
+}
