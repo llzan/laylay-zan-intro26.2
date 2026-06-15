@@ -28,35 +28,43 @@ for (let i = 0; i < projects.length; i++) {
   projectsList.appendChild(project);
 }
 
-messageForm = document.forms["leave_message"];
+// Handle Message Form Submission
+
+const messageForm = document.forms["leave_message"];
 messageForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  let name = event.target.usersName["name"].value;
-  let email = event.target.usersEmail["email"].value;
-  let message = event.target.usersMessage["message"].value;
+  const name = event.target.usersName.value;
+  const email = event.target.usersEmail.value;  
+  const message = event.target.usersMessage.value;
   console.log(name, email, message);
 
-  let messageSectiuon = document.querySelector("#messages ul");
-  let messageList = document.querySelector("#messages li");
-  let newMessage = document.createElement("li");
-  newMessage.innerHTML = `<a href="mailto:${email}">${usersName}</a> <span>(${usersEmail})</span> says: <span>${usersMessage}</span>`;
-  messageSectiuon.appendChild(newMessage);
 
-  let removeButton = document.createElement("button");
+
+// Display Messages in List
+
+  const messageSection = document.querySelector("#messages");
+
+  const messageList = messageSection.querySelector("ul");
+
+  const newMessage = document.createElement("li");
+
+  newMessage.innerHTML = `<a href="mailto:${email}">${name}</a> <span>(${email})</span> says: <span>${message}</span>`;
+ 
+  messageList.appendChild(newMessage);
+
+ const removeButton = document.createElement("button");
   removeButton.textContent = "Remove";
   removeButton.type = "button";
   newMessage.appendChild(removeButton);
 
   removeButton.addEventListener("click", function () {
-    messageSectiuon.removeChild(newMessage);
 
-    let entry = entry.parentNode;
-    entry.parentNode.removeChild(entry);
-  });
 
-  document.querySelector("#messages ul").removeChild(newMessage);
-  document.querySelector("#messages li").removeChild(messageList);
+    const entry = removeButton.parentNode;
+    entry.remove();
+    });
 
   messageForm.reset();
+
 });
