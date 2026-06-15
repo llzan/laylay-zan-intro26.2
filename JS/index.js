@@ -27,3 +27,5 @@ for (let i = 0; i < projects.length; i++) {
   project.textContent = projects[i];
   projectsList.appendChild(project);
 }
+
+
