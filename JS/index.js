@@ -22,10 +22,6 @@ for (let i = 0; i < skills.length; i++) {
 let projects = ["LSAT Study Guide", "Earthday Login", "Meal Planner App"];
 let projectsList = document.querySelector("#projects ul");
 
-for (let i = 0; i < projects.length; i++) {
-  let project = document.createElement("li");
-  project.textContent = projects[i];
-  projectsList.appendChild(project);
-}
+
 
 
