@@ -227,3 +227,27 @@ footer {
   color: #7591b5;
 }
 
+/* Repository List Styling */
+
+#repo-list {
+  list-style: none;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.repo-item {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 10px;
+} 
+.repo-name {
+  font-weight: bold;
+}
+.repo-description {
+  font-weight: normal;
+} 
