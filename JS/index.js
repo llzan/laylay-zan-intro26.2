@@ -25,6 +25,12 @@ for (let i = 0; i < skills.length; i++) {
 }
 
 
+for (let i = 0; i < projects.length; i++) {
+  let project = document.createElement("li");
+  project.textContent = projects[i];
+  projectsList.appendChild(project);
+}
+
 // Handle Message Form Submission
 
 const messageForm = document.forms["leave_message"];
@@ -35,6 +41,8 @@ messageForm.addEventListener("submit", function (event) {
   const email = event.target.usersEmail.value;  
   const message = event.target.usersMessage.value;
   console.log(name, email, message);
+
+
 
 // Display Messages in List
 
