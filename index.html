@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
   <head>
@@ -18,6 +18,7 @@
       <a href="#Experience">Experience</a>
       <a href="#Skills">Skills</a>
       <a href="#Projects">Projects</a>
+      <a href="#leave_message">Leave a Message</a>
       <a href="#Connect">Connect</a>
     </nav>
 
@@ -77,7 +78,7 @@
 
     <section id="projects">
       <h2>Projects</h2>
-      <ul></ul>
+      <ul id="repo-list"></ul>
     </section>
 
     <section id="connect">
@@ -87,10 +88,29 @@
       <a href="https://www.instagram.com/tekeekoh">Instagram</a>
     </section>
 
-    <section id="projects ul">
-      <h2>GitHub Repositories</h2>
-      <ul id="repo-list"></ul>
+    <section id="leave_message">
+      <h2>Leave a Message</h2>
+      <form name="leave_message">
+        <br />
+        <label for="usersName">Name:</label>
+        <input type="text" name="usersName" required="true" />
+        <br />
+        <label for="usersEmail">Email:</label>
+        <input type="email" name="usersEmail" required="true" />
+        <br />
+        <label for="usersMessage">Message:</label>
+        <textarea name="usersMessage" required="true"></textarea>
+        <br />
+        <button type="submit">Submit</button>
+      </form>
     </section>
+
+    <section id="messages">
+      <h2>Messages</h2>
+      <ul></ul>
+    </section>
+
+    <footer></footer>
 
     <script src="js/index.js"></script>
   </body>

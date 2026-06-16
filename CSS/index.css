@@ -147,3 +147,101 @@ footer {
   padding: 50px;
   margin-top: 50px;
 }
+
+/* Message Form Section Styling */
+
+#leave_message {
+  background-color: #c3d3e5;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+#leave_message h2 {
+  color: #7591b5;
+  font-size: 25px;
+  font-family: "monospace", monospace;
+  font-weight: bold;
+}
+
+#leave_message form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+#leave_message label {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+  color: #7591b5;
+}
+
+#leave_message input,
+#leave_message textarea {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+/* Messages Section Styling */
+
+#messages {
+  background-color: #c3d3e5;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 2.0;
+  text-align: justify;
+
+  padding: 15px;
+  margin: 20px;
+  border-radius: 20px;
+} 
+
+#messages h2 {
+  color: #7591b5;
+  font-size: 25px;
+  font-family: "monospace", monospace;
+  font-weight: bold;
+  padding: 10px;
+} 
+
+#messages label {
+  font-size: 10px;
+  font-weight: bold;
+  text-align: left;
+  text-align: justify;
+  color: #7591b5;
+}
+
+// Repository List Styling
+.repo-list {
+  margin-bottom: 10px;
+}
+
+.repo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.repo-name {
+  font-weight: bold;
+}
+
+.repo-description {
+  font-size: 14px;
+} 
