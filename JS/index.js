@@ -66,7 +66,6 @@ messageForm.addEventListener("submit", function (event) {
 
 // Fetch API - Displaying GitHub Repositories
 
-// Fetch API - Displaying GitHub Repositories
 
 // Create Fetch
 
@@ -74,41 +73,43 @@ fetch("https://api.github.com/users/llzan/repos")
 
 // Get the response data - JSON Data
 
-.then((response) => {
-  if (!response.ok) {
-    throw new Error("Request Failed");  
-  }
-  return response.json();
-})
-.then((repositories) => {
-  console.log("json data =", repositories);
- 
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Request failed: ${response.status}");
+    }
+    return response.json();
+  })
+// display the repositories
+
+  .then((repositories) => {
+    const projectList = document.getElementById("repo-list");
+
+    for (const repo of repositories) {
+      const project = document.createElement("li");
+      project.className = "repo-item";
+
+      const repositoryName = document.createElement("a");
+      repositoryName.className = "repo-name";
+      repositoryName.textContent = repo.name;
+      repositoryName.href = repo.html_url;
+      repositoryName.target = "_blank";
+      repositoryName.rel = "noopener noreferrer";
+
+      const repositoryDescription = document.createElement("p");
+      repositoryDescription.className = "repo-description";
+      repositoryDescription.textContent =
+        repo.description ||
+        `${repo.name} development repository`;
+
+      project.appendChild(repositoryName);
+      project.appendChild(repositoryDescription);
+      projectList.appendChild(project);
+    }
+  })
+  // handling errors
+
+  .catch((error) => {
+    console.error("Error:", error);
+  });
 
 
-  const projectSection = document.getElementById("projects");
-  const projectList = projectSection.querySelector("repo-list");
- 
-
-  for (let i = 0; i < repositories.length; i++) {
-    const project = document.createElement("li");
-    project.className = "repo-list";
-  
-    const repositoryName = document.createElement("span");
-    repositoryName.className = "repo-name";
-    const repo = repositories[i];
-    repositoryName.innerText = repo.name;
-  
-
-    const repositoryDescription = document.createElement("p");
-    repositoryDescription.className = "repo-description";
-    repositoryDescription.innerText = repo.description
-      ? repo.description
-      : `${repo.name} development git repository`;
-
-    project.appendChild(repositoryName);
-    project.appendChild(repositoryDescription);
-    projectList.appendChild(project);
-
-  }
-})
-.catch((error) => console.error("Error fetching repositories:", error));
