@@ -1,3 +1,5 @@
+console.log("Script Loaded");
+
 // DOM API - Manipulating the Document Object Model - Insert Copyright Footer
 let today = new Date();
 
@@ -64,50 +66,49 @@ messageForm.addEventListener("submit", function (event) {
 
 // Fetch API - Displaying GitHub Repositories
 
-fetch("https://api.github.com/users/laylayzan/repos")
+// Fetch API - Displaying GitHub Repositories
+
+// Create Fetch
+
+fetch("https://api.github.com/users/llzan/repos")
+
+// Get the response data - JSON Data
 
 .then((response) => {
   if (!response.ok) {
-    throw new Error("Request Failed");
+    throw new Error("Request Failed");  
   }
   return response.json();
 })
-.then((data) => {
-  console.log("json data", data);
-  const repositories = data;
-  console.log("repositories array =", repositories);
+.then((repositories) => {
+  console.log("json data =", repositories);
+ 
 
-  const projectSection = document.querySelector("#projects");
-  const projectList = projectSection.querySelector("ul");
+
+  const projectSection = document.getElementById("projects");
+  const projectList = projectSection.querySelector("repo-list");
+ 
 
   for (let i = 0; i < repositories.length; i++) {
     const project = document.createElement("li");
     project.className = "repo-list";
-    
-    const repositoryRow = document.createElement("div");
-    repositoryRow.className = "repo-row";
-
+  
     const repositoryName = document.createElement("span");
     repositoryName.className = "repo-name";
-    repositoryName.innerText = `${repositories[i].name}`;
-    console.log("repositoryName");
+    const repo = repositories[i];
+    repositoryName.innerText = repo.name;
+  
 
-    const repositoryDescription = document.createElement("span");
+    const repositoryDescription = document.createElement("p");
     repositoryDescription.className = "repo-description";
+    repositoryDescription.innerText = repo.description
+      ? repo.description
+      : `${repo.name} development git repository`;
 
-    repositoryDescription.innerText = repositories[i].description
-    ? repositories[i].description
-    : `${repositories[i].name} development git repository`;
-    console.log("repositoryDescription");
-
-    repositoryRow.appendChild(repositoryName);
-    repositoryRow.appendChild(repositoryDescription);
-    project.appendChild(repositoryRow);
+    project.appendChild(repositoryName);
+    project.appendChild(repositoryDescription);
     projectList.appendChild(project);
 
   }
 })
-.catch((error) => {
-  console.error("Error fetching repositories:", error); 
-});
-
+.catch((error) => console.error("Error fetching repositories:", error));

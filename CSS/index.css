@@ -227,21 +227,10 @@ footer {
   color: #7591b5;
 }
 
-// Repository List Styling
-.repo-list {
-  margin-bottom: 10px;
-}
+/* Repository List Styling */
 
-.repo-row {
+#repo-list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
-
-.repo-name {
-  font-weight: bold;
-}
-
-.repo-description {
-  font-size: 14px;
-} 
