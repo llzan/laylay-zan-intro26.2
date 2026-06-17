@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 900px;
+  margin: 2rem auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+nav {
+    margin-bottom: 20px
+}
+
+a {
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 16px;
+    color: #657080
+}
+a:hover {
+    text-decoration: none;
+    background-color: #abc8db;
+    border-radius: 40px;
+}
+
+#logo {
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+img {
+    width: 250px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+}
+
+h1 {
+    color: #657080;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 0 auto;
+    color: #000000;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: lighter;
+}
+
+
+#search-form {
+ align-items: center;
+ margin: 0 auto;
+ box-align: center;
+
+}
+
+
+div.search-container {
+    margin: 30px 0;
+    display: grid;
+    gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+
+#artist-button, #color-button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    align-items: center;
+}
+#artist-button:hover, #color-button:hover {
+    text-decoration: none;
+    background-color: #abc8db;
+    border-radius: 40px;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
