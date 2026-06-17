@@ -37,7 +37,7 @@ colorBtn.addEventListener("click", async () => {
   const color = searchInput.value.trim().toLowerCase();
 
   const response = await fetch(
-    "https://api.artic.edu/api/v1/artworks?limit=50"
+    `https://api.artic.edu/api/v1/artworks?limit=100&color=${color}`
   );
 
   const data = await response.json();
